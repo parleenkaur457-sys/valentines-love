@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Piyush ❤️ Parleen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  margin:0;
+  font-family:'Comic Sans MS','Poppins',sans-serif;
+  background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden;
+}
+.card{
+  background:#fff;
+  width:92%;
+  max-width:430px;
+  border-radius:25px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+  animation:pop 0.8s ease;
+}
+@keyframes pop{
+  from{transform:scale(0.7);opacity:0;}
+  to{transform:scale(1);opacity:1;}
+}
+h1{color:#ff4b6e;margin-bottom:5px;}
+.emoji{font-size:45px;animation:bounce 1s infinite;}
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+p{color:#444;font-size:15px;line-height:1.6;}
+button{
+  margin-top:12px;
+  background:#ff4b6e;
+  color:#fff;
+  border:none;
+  padding:12px 22px;
+  border-radius:30px;
+  font-size:15px;
+  cursor:pointer;
+}
+button:hover{transform:scale(1.05);}
+.hidden{display:none;}
+.chat{
+  text-align:left;
+  background:#f6f6f6;
+  padding:10px;
+  border-radius:15px;
+  margin-top:10px;
+  font-size:14px;
+}
+.me{color:#ff4b6e;font-weight:bold;}
+.him{color:#333;font-weight:bold;}
+.footer{margin-top:10px;font-size:13px;color:#777;}
+.heart{
+  position:absolute;
+  font-size:18px;
+  animation:float 5s linear infinite;
+}
+@keyframes float{
+  from{transform:translateY(100vh);}
+  to{transform:translateY(-10vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="emoji">😜❤️</div>
+  <h1>Happy Valentine’s Day, Piyush!</h1>
+
+  <p>
+    Dear Piyush 🤭<br>
+    Tum annoying ho 😌<br>
+    Tum cute ho 🥺<br>
+    Tum mere ho 😎❤️<br>
+    Aur haan… option toh bilkul nahi ho 😂
+  </p>
+
+  <button onclick="showLove()">Click karo agar Parleen pasand hai 😏</button>
+
+  <div id="love" class="hidden">
+    <p>
+      🎉 CONGRATULATIONS 🎉<br>
+      Aap officially Parleen ke Valentine ho 💍❤️<br>
+      Lifetime validity. No uninstall 😜
+    </p>
+
+    <div class="chat">
+      <p><span class="me">Parleen:</span> Suno na…</p>
+      <p><span class="him">Piyush:</span> Hmm?</p>
+      <p><span class="me">Parleen:</span> Will you be my Valentine? 🌹</p>
+      <p><span class="him">Piyush:</span> Option hai? 😅</p>
+      <p><span class="me">Parleen:</span> Nahi 😎</p>
+      <p><span class="him">Piyush:</span> Toh haan ❤️😂</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    Made with 💖 by Parleen (Minister of Piyush Affairs)
+  </div>
+</div>
+
+<script>
+function showLove(){
+  document.getElementById("love").classList.remove("hidden");
+  alert("Piyush 😜 Ab toh phas gaye ho ❤️");
+}
+
+setInterval(()=>{
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤️";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(3+Math.random()*3)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+},400);
+</script>
+
+</body>
+</html>
